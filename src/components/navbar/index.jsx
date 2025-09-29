@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { GlobalContext } from "../../context";
 
 export default function NavBar() {
-  const { search, setSearch } = useContext(GlobalContext);
+  const { search, setSearch, handleSubmit } = useContext(GlobalContext);
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -13,7 +13,7 @@ export default function NavBar() {
           </NavLink>
         </h2>
 
-        <div className="search-bar">
+        <form onSubmit={handleSubmit} className="search-bar">
           <input
             type="text"
             name="search"
@@ -22,8 +22,10 @@ export default function NavBar() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button className="search-btn">Search</button>
-        </div>
+          <button onClick={handleSubmit} className="search-btn">
+            Search
+          </button>
+        </form>
 
         <div className="links">
           <NavLink to={"/"} className="link">
