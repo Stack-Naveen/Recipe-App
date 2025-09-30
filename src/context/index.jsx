@@ -5,7 +5,7 @@ export const GlobalContext = createContext(null);
 export default function GlobalState({ children }) {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
-  const [list, setList] = useState("");
+  const [list, setList] = useState([]);
   console.log(search);
 
   async function handleSubmit(event) {
@@ -34,7 +34,9 @@ export default function GlobalState({ children }) {
   console.log(loading);
 
   return (
-    <GlobalContext.Provider value={{ search, setSearch, handleSubmit }}>
+    <GlobalContext.Provider
+      value={{ search, setSearch, handleSubmit, list, loading }}
+    >
       {children}
     </GlobalContext.Provider>
   );
