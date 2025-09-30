@@ -126,11 +126,10 @@ body {
   gap: 2rem;
 }
 
-/* Card */
 .card {
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(27, 31, 59, 0.12); /* indigo shadow */
+  box-shadow: 0 4px 12px rgba(27, 31, 59, 0.12);
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
@@ -205,4 +204,118 @@ body {
 .loading {
   font-size: 1.2rem;
   color: #1b1f3b;
+}
+
+.details-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(27, 31, 59, 0.15);
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.details-image-wrapper {
+  flex: 0 0 220px;
+}
+
+.details-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details-publisher {
+  color: #2ec4b6;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.details-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1b1f3b;
+}
+
+.details-btn {
+  align-self: flex-start;
+  background: #1b1f3b;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+  background: #2ec4b6;
+  color: #1b1f3b;
+}
+
+.ingredients-section {
+  margin-top: 0.5rem;
+}
+
+.ingredients-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1b1f3b;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ingredient-item {
+  background: #f4f4f1;
+  border-left: 4px solid #2ec4b6;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .details-card {
+    flex-direction: column;
+  }
+
+  .details-image-wrapper {
+    flex: none;
+    width: 100%;
+  }
+
+  .details-img {
+    width: 100%;
+    height: 200px;
+  }
 }
