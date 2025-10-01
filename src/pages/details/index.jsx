@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { GlobalContext } from "../../context";
 
 export default function Details() {
-  const { recipeDetails, setRecipeDetails } = useContext(GlobalContext);
+  const { recipeDetails, setRecipeDetails, fav, setFav, handleFav } =
+    useContext(GlobalContext);
   const { id } = useParams();
 
   async function details() {
@@ -35,7 +36,14 @@ export default function Details() {
           <div className="details-publisher">{recipeDetails?.publisher}</div>
           <h2 className="details-title">{recipeDetails?.title}</h2>
 
-          <button className="details-btn">Add to Fav</button>
+          <button
+            onClick={() => handleFav(recipeDetails)}
+            className="details-btn"
+          >
+            {fav.some((item) => item.id === recipeDetails?.id)
+              ? "Remove From Fav"
+              : "Add To Fav"}
+          </button>
 
           <div className="ingredients-section">
             <h3 className="ingredients-heading">Ingredients :</h3>
