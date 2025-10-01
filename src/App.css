@@ -13,7 +13,7 @@ body {
 
 .navbar {
   width: 100%;
-  background: linear-gradient(90deg, #1b1f3b, #3e3e55);
+  background: #1b1f3b;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   position: sticky;
@@ -52,11 +52,9 @@ body {
   position: relative;
   transition: all 0.3s ease;
 }
-
 .link:hover {
   color: #2ec4b6;
 }
-
 .link::after {
   content: "";
   position: absolute;
@@ -68,7 +66,6 @@ body {
   border-radius: 2px;
   transition: width 0.3s ease;
 }
-
 .link:hover::after {
   width: 100%;
 }
@@ -90,7 +87,6 @@ body {
   width: 300px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .search-input:focus {
   border-color: #2ec4b6;
   box-shadow: 0 0 8px rgba(46, 196, 182, 0.5);
@@ -107,7 +103,6 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .search-btn:hover {
   background: #bf4b1f;
   transform: scale(1.05);
@@ -124,6 +119,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  align-items: stretch;
+  justify-items: center;
 }
 
 .card {
@@ -134,8 +131,10 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
 }
-
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(27, 31, 59, 0.25);
@@ -144,7 +143,8 @@ body {
 .card-img {
   width: 100%;
   height: 200px;
-  object-fit: fill;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
 }
 
 .card-body {
@@ -167,6 +167,11 @@ body {
   color: #2a2a2a;
   margin-bottom: 0.8rem;
   flex-grow: 1;
+
+  line-height: 1.2rem;
+  max-height: 2.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-btn {
@@ -184,7 +189,6 @@ body {
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
-
 .card-btn:hover {
   background: #2ec4b6;
   color: #1b1f3b;
@@ -195,12 +199,10 @@ body {
   text-align: center;
   margin-top: 2rem;
 }
-
 .empty {
   font-size: 1.4rem;
   color: #6d6d7a;
 }
-
 .loading {
   font-size: 1.2rem;
   color: #1b1f3b;
@@ -273,7 +275,6 @@ body {
   text-transform: uppercase;
   transition: all 0.3s ease;
 }
-
 .details-btn:hover {
   background: #2ec4b6;
   color: #1b1f3b;
@@ -282,20 +283,17 @@ body {
 .ingredients-section {
   margin-top: 0.5rem;
 }
-
 .ingredients-heading {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #1b1f3b;
 }
-
 .ingredients-list {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
-
 .ingredient-item {
   background: #f4f4f1;
   border-left: 4px solid #2ec4b6;
@@ -304,18 +302,31 @@ body {
   font-size: 0.8rem;
 }
 
+@media (max-width: 992px) {
+  .home-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .details-card {
     flex-direction: column;
   }
-
   .details-image-wrapper {
     flex: none;
     width: 100%;
   }
-
   .details-img {
     width: 100%;
     height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-input {
+    width: 100%;
+  }
+  .home {
+    padding: 1rem;
   }
 }
