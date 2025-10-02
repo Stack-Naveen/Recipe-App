@@ -10,7 +10,7 @@ export default function NavBar() {
       <div className="navbar-container">
         <h2 className="logo">
           <NavLink to={"/"} className="link">
-            Recipe App
+            Flavorly
           </NavLink>
         </h2>
 
@@ -18,7 +18,7 @@ export default function NavBar() {
           <input
             type="text"
             name="search"
-            placeholder="Enter a recipe name..."
+            placeholder="Enter a recipe..."
             className="search-input"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
