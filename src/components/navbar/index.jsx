@@ -24,7 +24,8 @@ export default function NavBar() {
             onChange={(e) => setSearch(e.target.value)}
           />
           <button onClick={handleSubmit} className="search-btn">
-            Search
+            <FaSearch />
+            <span>Search</span>
           </button>
         </form>
 

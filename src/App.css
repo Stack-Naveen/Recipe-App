@@ -369,7 +369,7 @@ body {
     justify-content: space-between;
     flex-wrap: nowrap;
     gap: 0.5rem;
-    padding: 0.4rem 0.6rem;
+    padding: 0.6rem 0.6rem;
   }
 
   .logo {
@@ -393,9 +393,13 @@ body {
     display: none;
   }
 
+  .search-btn span {
+    display: none;
+  }
+
   .search-bar {
     flex: 1;
-    max-width: 220px;
+    max-width: 230px;
     margin: 0;
   }
 
