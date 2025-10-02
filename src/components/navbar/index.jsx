@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { GlobalContext } from "../../context";
+import { FaHome, FaHeart, FaSearch } from "react-icons/fa";
 
 export default function NavBar() {
   const { search, setSearch, handleSubmit } = useContext(GlobalContext);
@@ -29,10 +30,12 @@ export default function NavBar() {
 
         <div className="links">
           <NavLink to={"/"} className="link">
-            Home
+            <FaHeart />
+            <span>Home</span>
           </NavLink>
           <NavLink to={"/favourites"} className="link">
-            Favourites
+            <FaHome />
+            <span>Favourite</span>
           </NavLink>
         </div>
       </div>

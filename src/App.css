@@ -14,8 +14,6 @@ body {
 .navbar {
   width: 100%;
   background: #1b1f3b;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -56,6 +54,9 @@ body {
   color: #f5f5f5;
   position: relative;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .link:hover {
   color: #2ec4b6;
@@ -112,6 +113,9 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .search-btn:hover {
   background: #bf4b1f;
@@ -359,44 +363,88 @@ body {
 }
 
 @media (max-width: 576px) {
-  .logo {
-    font-size: 1.6rem;
-  }
   .navbar-container {
-    gap: 0.2rem;
-    padding: 0.4rem 0.8rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
   }
+
+  .logo {
+    font-size: 1rem;
+    margin-right: auto;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    flex-wrap: nowrap;
+  }
+
+  .link {
+    font-size: 1rem;
+    color: #f5f5f5;
+  }
+
+  .link span {
+    display: none;
+  }
+
   .search-bar {
-    margin-top: 0.2rem;
-    max-width: 100%;
+    flex: 1;
+    max-width: 220px;
+    margin: 0;
   }
+
+  .search-input {
+    min-width: 140px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .search-btn {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
   .home {
     padding: 1rem;
   }
+
   .home-container {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
+
   .card {
     max-width: 100%;
   }
+
   .card-img {
     height: 200px;
   }
+
   .card-title {
     font-size: 1rem;
     line-height: 1.4rem;
     max-height: 2.8rem;
   }
+
   .details-card {
     padding: 1rem;
   }
+
   .details-title {
     font-size: 1.2rem;
   }
+
   .ingredients-heading {
     font-size: 1rem;
   }
+
   .ingredient-item {
     font-size: 0.8rem;
   }
