@@ -1,4 +1,4 @@
- 🍴 Flavorly – Recipe Finder App
+## 🍴 Flavorly – Recipe Finder App
 
 A sleek and functional **Recipe Finder App** built with **React** that allows users to search, explore, and save their favourite recipes. It uses the **Forkify API** to fetch real recipes and provides a smooth, responsive, and modern user experience.
 
