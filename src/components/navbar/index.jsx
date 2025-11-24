@@ -30,13 +30,13 @@ export default function NavBar() {
         </form>
 
         <div className="links">
-          <NavLink to={"/"} className="link">
-            <FaHeart />
-            <span>Home</span>
-          </NavLink>
           <NavLink to={"/favourites"} className="link">
-            <FaHome />
+            <FaHeart />
             <span>Favourite</span>
+          </NavLink>
+          <NavLink to={"/"} className="link">
+            <FaHome />
+            <span>Home</span>
           </NavLink>
         </div>
       </div>
